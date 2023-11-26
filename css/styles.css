@@ -17,26 +17,30 @@
 
 
 html, body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
 .header {
-	margin:0 auto;
+	margin: 0;
 	padding: 0;
-	position: relative;
-
-	min-width: 1200px;
-	max-width: 1660px;
+	min-width: 100%;
+	max-width: 1655px;
 	height: 450px;
+	z-index: 0;
 }
 
 .header_img {
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100%;
 	height: 100%;
 	background-image: url("../img/banner-bg.jpg");
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #ffffff;
 	z-index: -1;
 }
 
@@ -54,18 +58,18 @@ html, body {
 
 .header_content {
 	position: absolute;
-	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	margin-top: 28px;
-	padding:0 15px;
-	width: 1200px;
-	height: 100%;              
+	margin-left: 0;
+	margin-right: 0;
+	padding:0 15px 0 15px;
+	max-width: 1655px;
+	max-height: 100%;              
 	z-index: 0;
 	top: 0;
 	left: 50%;
-	color: #ffffff;
 	transform: translate(-50%, 0%);
 	z-index: 1;
 }
@@ -73,6 +77,8 @@ html, body {
 .header_menu {
 	display: flex;
 	justify-content: space-between;
+	min-width: 100vh;
+	max-width: 1655px;
 	font-size: 45px;
 	text-align: center;
 	width: 100%;
@@ -92,6 +98,8 @@ html, body {
 	display: flex;
 	width: 464px;
 	font-size: 13px;
+	font-family: "OpenSans-Regular", sans-serif;
+	text-transform: uppercase;
 }
 
 
@@ -101,23 +109,30 @@ html, body {
 	color: #ffffff;
 }
 
+.navi_buttons:hover {
+	text-decoration: underline;
+}
+
 .header_title {
 	text-align: center;
-	padding-top: 126px;
+	margin-top: 125px;
+	width: 100%;
 	height: 48%;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: "OpenSans-Bold", sans-serif;
 	font-size: 45px;
+	text-transform: uppercase;
 	color: #ffffff;
-	padding-left: 20.5%;
-	padding-right: 20.5%;
 
 
 }
 
 .main {
-	min-width: 1200px;
-	max-width: 1660px;
+	max-width: 1655px;
+	margin: 0 auto 0 auto;
 	background-color: white;
-}
+} 
 
 .divider {
 	box-sizing: border-box;
@@ -125,23 +140,25 @@ html, body {
 	height: 122px;
 	text-align: center;
 	padding: 55px 0 0 0;
-	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .divider_title {
 	font-family: "OpenSans-Bold", sans-serif;
 	font-size: 20px;
-	font-color: black;
+	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
 	padding: 0;
 }
 
 .divider_title::after {
 	content: "";
 	display: block;
-	margin: 13px auto 0 auto;
+	margin: 10px auto 0 auto;
 	width: 67px;
 	border-bottom: 3px solid #b59f5b;
 	opacity: 40%
@@ -150,26 +167,32 @@ html, body {
 .in_trend {
 	display: flex;
 	flex-wrap: nowrap;
-	width: 100%;
+	justify-content: center;
+	min-width: 1200px;
+	max-width: 1655px;
 	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 64px;
+	
 }
 
 .in_trend_news {
 	position: relative;
 	display: flex;
+	width: 100%;
+	min-height: 348px;
 	box-sizing: border-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	align-items: end;
 }
 
 .in_trend_news:not(:last-child) {
 	margin-right: 4px;
 }
 
-
-.in_trend_news__img {
-	object-fit: cover;
-	width: 100%;
-}
 
 .in_trend_news::after {
 	content: "";
@@ -183,25 +206,27 @@ html, body {
 }
 
 .in_trend_news___container {
-	position: absolute;
 	box-sizing: border-box;
 	width: 88%;
-	margin: auto;
-	padding-bottom: 35px;
-	padding-left: 35px;
+	margin: 15px auto 15px auto;
+	padding-bottom: 30px;
+	padding-left: 30px;
 	padding-right: 0;
-	left: 50%;
-	bottom: 15px;
 	border: 3px solid rgba(181, 159, 91, 0.6);
-	transform: translate(-50%, 0%);
 	z-index: 1;
 }
 
 .in_trend_news___title {
 	font-size: 20px;
 	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
 	padding: 0;
 	margin: 0;
+}
+
+.in_trend_news___title:hover {
+	color: #b59f5b;;
 }
 
 .tags {
@@ -209,26 +234,30 @@ html, body {
 	flex: 0 0 auto;
 	justify-content: left;
 	height: 20px;
-	color: #b59f5b;
 	margin-top: 39px;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 }
 
 .tag {
 	font-family: "OpenSans-Bold", sans-serif;
 	font-size: 14px;
 	margin-right: 20px;
+	color: #b59f5b;
+	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.tag:hover {
+	text-decoration: underline;
 }
 
 .content {
 	display: flex;
 	justify-content: space-between;
-	width: 1200px;
 	box-sizing: border-box;
 	background-color: #ffffff;
-	padding: 0 15px;
-	margin: 0 auto;
+	padding: 0 15px 0 15px;
+	margin: 0 13% 0 13%;
 }
 
 .post {
@@ -244,30 +273,42 @@ html, body {
 	flex: 0 0 auto;
 	justify-content: left;
 	color: #b59f5b;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 .post_img {
 	max-width: 382px;
+	min-width: 50%;
+	margin-right: 31px;
+	background-color: #eff6f1;
+	object-fit: cover;
 }
 
 .post_content {
-	margin-left: 31px;
 	max-width: 360px;
+	order:2;
+	margin-right: 0;
+	margin-left: auto;
 }
 
 .post_title {
 	text-align: left;
 	font-family: "OpenSans-Bold", sans-serif;
+	text-decoration: none;
 	font-size: 20px;
-	font-color: black;
+	line-height: 24px;
+	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
+.post_title:hover {
+	color: #b59f5b;;
+}
+
 .post_info {
-	margin-top: 39px;
-	margin-bottom: 60px;
+	margin-top: 26px;
+	margin-bottom: 46px;
 }
 
 .post_info__date {
@@ -285,12 +326,11 @@ html, body {
 
 .post_text {
 	font-size: 15px;
+	line-height: 22px;
 	font-family: "OpenSans-Regular", sans-serif;
 }
 
 .aside {
-	display: flex;
-	flex-direction: column;
 	width: 273px;
 	padding: 0 0 0 2px;
 }
@@ -359,7 +399,7 @@ html, body {
 .input:active,
 .input:hover,
 .input:focus {
-    outline: 1px solid #cfcfcf;
+    outline: 1px solid #b59f5b;
     outline-offset: -1px;
 }
 
@@ -376,6 +416,7 @@ html, body {
 	background-size: 18px;
 	background-position: center;
 	background-repeat: no-repeat;
+	border: none !important;
 	padding: 0;
 }
 
@@ -397,6 +438,14 @@ html, body {
 	margin-bottom: 60px;
 }
 
+.search_button:active,
+.search_button:hover,
+.submit:active,
+.submit:hover {
+  background-color: #323232;
+}
+
+
 .tags_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -413,6 +462,7 @@ html, body {
 	font-family: "OpenSans-Bold", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration: none;
 	font-size: 12px;
 	color: #0f0d0e;
 	border: 3px solid #eeeeee;
@@ -420,6 +470,10 @@ html, body {
 	padding: 0 15px 0 15px;
 	margin: 0 6px 6px 0;
 	height: 30px;
+}
+
+.tag_entity:hover {
+	border: 3px solid #b59f5b;
 }
 
 .topics_container{
@@ -449,12 +503,17 @@ html, body {
 	color: #000000;
 	font-size: 14px;
 	text-transform: capitalize;
+	text-decoration: none;
 	align-items: center;
 	height: 100%;
 	margin-right: 6px;
 }
 
-.topic_enties__counter{
+.topic_name:hover {
+	color: #b59f5b;
+}
+
+.topic_enties__counter {
 	display: flex;
 	font-family: "OpenSans-Bold", sans-serif;
 	font-size: 12px;
@@ -480,7 +539,7 @@ html, body {
 	align-items: center;
 	flex: 0 0 auto;
 	width: 347px;
-	height: 438px;
+	min-height: 438px;
 	justify-content: space-between;
 	z-index: 0;
 }
@@ -489,10 +548,10 @@ html, body {
 	content: "";
 	position: absolute;
 	box-sizing: border-box;
+	top: 174px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 265px;
 	border: 3px solid #b59f5b;
 	z-index: 1;
 }
@@ -516,11 +575,16 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
+	z-index: 2;
 }
 
 .hyperlink {
 	text-decoration: none;
 	color: #b59f5b;
+}
+
+.hyperlink:hover {
+	text-decoration: underline;
 }
 
 
@@ -529,6 +593,7 @@ html, body {
 	display: flex;
 	width: 100%;
 	margin-top: 25px;
+	margin-bottom: 22px;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	height: 48px;
@@ -538,12 +603,14 @@ html, body {
 .price {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: end;
 	padding-bottom: 6px;
 }
 
 .to_shop {
 	width: 140px;
+	margin: 0;
 }
 
 .old_price {
@@ -555,18 +622,24 @@ html, body {
 	line-height: 1em;
 }
 
-.old_price:not(:empty):after,
-.actual_price:not(:empty):after {
-    content: "₽";
-    margin-left: 4px;
-}
-
 .actual_price {
 	flex: 0 0 auto;
 	margin: 0;
 	padding: 0;
 	line-height: 1em;
 }
+
+.old_price:not(:empty):after,
+.actual_price:not(:empty):after {
+    content: "₽";
+    margin-left: 4px;
+}
+
+.old_price:hover,
+.actual_price:hover {
+	color: black;
+}
+
 
 .follow_us {
 	display: flex;
