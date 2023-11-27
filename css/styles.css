@@ -300,6 +300,8 @@ html, body {
 	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .post_title:hover {
@@ -667,4 +669,8 @@ html, body {
 	font-family: "OpenSans-Bold", sans-serif;
 	font-size: 12px;
 	color: #999999;
+}
+
+.no_events {
+	pointer-events: none;
 }
